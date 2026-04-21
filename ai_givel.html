@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的视频播放页</title>
+    <style>
+        /* 页面整体样式 */
+        body {
+            font-family: "微软雅黑", sans-serif;
+            background-color: #f4f4f4;
+            text-align: center; /* 让内容居中 */
+            padding: 20px;
+        }
+
+        /* 视频容器样式 */
+        .video-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: inline-block; /* 让容器宽度适应内容 */
+        }
+
+        /* 视频标签样式：限制最大宽度，防止在手机上太大 */
+        video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            background-color: #000;
+        }
+
+        /* 标题和段落样式 */
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <!-- 核心视频标签 -->
+        <!-- controls 属性：显示播放/暂停按钮和音量条 -->
+        <!-- poster 属性：视频封面图（可选） -->
+        <video controls poster="1.jpg">
+            <!-- source 标签：指定视频文件路径 -->
+            <!-- 这里的 src 可以是你本地的 mp4 文件，也可以是网络视频链接 -->
+            <source src="1.mp4" type="video/mp4">
+            
+            <!-- 如果浏览器太老不支持 video 标签，会显示下面的文字 -->
+            您的浏览器不支持视频播放，请升级浏览器。
+        </video>
+
+        <!-- 视频介绍信息 -->
+        <h2>这是视频的标题</h2>
+        <p>这里是视频的简介。你可以介绍视频的内容、作者或者相关的背景故事。</p>
+        <p>发布时间：2026年4月</p>
+    </div>
+
+</body>
+</html>
